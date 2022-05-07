@@ -67,6 +67,12 @@ end
 function M.filetype()
   g.do_filetype_lua = 1
   g.did_load_filetypes = 0
+
+  vim.filetype.add({
+    filename = {
+      ["Tiltfile"] = "tiltfile",
+    },
+  })
 end
 
 function M.other_settings()

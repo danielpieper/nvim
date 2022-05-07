@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local configs = require('lspconfig.configs')
 local lsp_signature = require('lsp_signature')
 local lspcontainers = require('lspcontainers')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
@@ -73,6 +74,28 @@ local on_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
+end
+
+if not configs.tilt then
+  configs.tilt = {
+    default_config = {
+      cmd = { "tilt", "lsp", "start" },
+      filetypes = { 'tiltfile' },
+      root_dir = function(fname)
+        return lspconfig.util.root_pattern("Tiltfile")(fname)
+      end,
+      single_file_support = true,
+    },
+    docs = {
+      description = [[
+https://docs.tilt.dev/cli/tilt_lsp_start.html
+tilt.dev Starlark LSP server.
+]],
+      default_config = {
+        root_dir = [[root_pattern("Tiltfile")]],
+      },
+    },
+  }
 end
 
 local servers = {
@@ -167,13 +190,16 @@ local servers = {
       }
     }
   },
+  tilt = {
+    root_dir = lspconfig.util.root_pattern("Tiltfile", vim.fn.getcwd()),
+  },
 }
 
 for server, config in pairs(servers) do
   config.on_attach = on_attach
 
   -- config.log_level = vim.lsp.protocol.MessageType.Log;
-  -- config.message_level = vim.lsp.protocol.MessageType.Log;
+  config.message_level = vim.lsp.protocol.MessageType.Log;
   config.capabilities = config.capabilities or vim.lsp.protocol.make_client_capabilities()
   config.capabilities = cmp_nvim_lsp.update_capabilities(config.capabilities)
 
