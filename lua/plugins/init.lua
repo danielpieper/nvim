@@ -157,13 +157,12 @@ return require('packer').startup {
 
 
         -- *****************************************
-        -- Dashboard & Sessions
+        -- Session
         -- *****************************************
         use {
-            'https://github.com/glepnir/dashboard-nvim',
+            'https://github.com/rmagatti/auto-session',
             -- disable = true,
-            config = 'require("plugins.dashboard-nvim")'
-        } -- neovim dashboard
+        } -- A small automated session manager for Neovim
 
 
         -- *****************************************

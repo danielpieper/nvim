@@ -5,7 +5,7 @@ local M = {}
 function M.createdir()
   local data_dir = {
     'backup',
-    'session',
+    'sessions',
     'swap',
     'tags',
     'undo'
@@ -133,6 +133,8 @@ function M.other_settings()
   vim.opt.list = true
 
   vim.opt.incsearch = true
+
+  vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 end
 
 function M.load_settings()
