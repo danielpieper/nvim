@@ -80,8 +80,8 @@ return require('packer').startup {
         use 'https://github.com/shumphrey/fugitive-gitlab.vim' -- An extension to fugitive.vim for gitlab support
         use {
             'https://github.com/tpope/vim-fugitive',
-            opt = true,
-            cmd = { 'Git', 'G', 'Gstatus', 'Gedit', 'Gsplit', 'Gdiffsplit', 'Gread', 'Gwrite', 'Ggrep', 'Glgrep', 'GMove', 'GRename', 'GDelete', 'GRemove', 'GBrowse', 'Gblame' },
+            -- opt = true,
+            -- cmd = { 'Git', 'G', 'Gstatus', 'Gedit', 'Gsplit', 'Gdiffsplit', 'Gread', 'Gwrite', 'Ggrep', 'Glgrep', 'GMove', 'GRename', 'GDelete', 'GRemove', 'GBrowse', 'Gblame' },
             config = 'require("plugins.vim-fugitive")',
             requires = {
                 'https://github.com/shumphrey/fugitive-gitlab.vim', -- An extension to fugitive.vim for gitlab support
@@ -170,14 +170,13 @@ return require('packer').startup {
         -- Status Bar
         -- *****************************************
         use {
-            'https://github.com/NTBBloodbath/galaxyline.nvim',
+            'https://github.com/nvim-lualine/lualine.nvim',
             disable = false,
-            branch = 'main', -- see https://github.com/wbthomason/packer.nvim/issues/86
-            config = 'require("plugins.galaxyline")',
+            config = 'require("plugins.lualine-nvim")',
             requires = {
                 'https://github.com/kyazdani42/nvim-web-devicons', -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
             }
-        } -- galaxyline componentizes vim's statusline, the text of each area is provided by a component.
+        } -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
 
 
         -- *****************************************

@@ -110,7 +110,7 @@ local servers = {
   },
   rnix = { },
   rust_analyzer = {
-    cmd = lspcontainers.command('rust_analyzer'),
+    -- cmd = lspcontainers.command('rust_analyzer'),
   },
   vuels = {
     before_init = function(params)
@@ -154,8 +154,17 @@ local servers = {
     -- cmd = lspcontainers.command('intelephense'),
     root_dir = lspconfig.util.root_pattern("composer.json", ".git", vim.fn.getcwd()),
     init_options = {
-      licenceKey = "~/.config/intelephense/license.txt",
+      licenceKey = "${config.xdg.configHome}/intelephense/license.txt",
       -- clearCache = true
+    },
+    settings = {
+      intelephense = {
+        environment = {
+          includePaths = {
+            "${config.home.homeDirectory}/.composer/vendor",
+          }
+        }
+      }
     }
   },
 }

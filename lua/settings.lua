@@ -64,6 +64,11 @@ function M.backup()
   vim.opt.backupskip = '/tmp/*,/private/tmp/*' -- Don’t create backups when editing files in certain directories
 end
 
+function M.filetype()
+  g.do_filetype_lua = 1
+  g.did_load_filetypes = 0
+end
+
 function M.other_settings()
   -- vim.opt.colorcolumn = "80"
   vim.opt.termguicolors = true
@@ -133,6 +138,7 @@ end
 function M.load_settings()
   M.createdir()
   M.disable_distribution_plugins()
+  M.filetype()
   M.leader_map()
   M.backup()
   M.line_numbers()
