@@ -80,7 +80,7 @@ if not configs.tilt then
   configs.tilt = {
     default_config = {
       cmd = { "tilt", "lsp", "start" },
-      filetypes = { 'tiltfile' },
+      filetypes = { 'tilt.config' },
       root_dir = function(fname)
         return lspconfig.util.root_pattern("Tiltfile")(fname)
       end,

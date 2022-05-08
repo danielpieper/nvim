@@ -70,7 +70,7 @@ function M.filetype()
 
   vim.filetype.add({
     filename = {
-      ["Tiltfile"] = "tiltfile",
+      ["Tiltfile"] = "tilt.config",
     },
   })
 end
