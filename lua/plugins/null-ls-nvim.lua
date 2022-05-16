@@ -14,6 +14,7 @@ null_ls.setup({
     null_ls.builtins.diagnostics.phpstan.with({
       extra_args = { "--memory-limit", "4G" },
       timeout = 60000,
+      method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
     }), -- PHP static analysis tool.
     null_ls.builtins.diagnostics.golangci_lint.with({
         args = { "run", "--fix=false", "--enable-all", "--disable=exhaustivestruct", "--out-format=json", "$DIRNAME", "--path-prefix", "$ROOT" }
