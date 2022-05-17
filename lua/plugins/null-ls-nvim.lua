@@ -19,5 +19,7 @@ null_ls.setup({
     null_ls.builtins.diagnostics.golangci_lint.with({
         args = { "run", "--fix=false", "--enable-all", "--disable=exhaustivestruct", "--out-format=json", "$DIRNAME", "--path-prefix", "$ROOT" }
     }), -- A Go linter aggregator.
+
+    null_ls.builtins.diagnostics.ktlint, -- An anti-bikeshedding Kotlin linter with built-in formatter.
   },
 })
