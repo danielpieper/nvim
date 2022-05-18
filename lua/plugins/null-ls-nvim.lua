@@ -7,7 +7,9 @@ null_ls.setup({
     null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
     null_ls.builtins.formatting.gofumpt, -- Enforce a stricter format than gofmt, while being backwards compatible.
 
-    null_ls.builtins.completion.spell, -- Spell suggestions completion source.
+    null_ls.builtins.completion.spell.with({
+      filetypes = { "gitcommit", "markdown" },
+    }), -- Spell suggestions completion source.
 
     null_ls.builtins.diagnostics.eslint, -- Fixes problems in your JavaScript code.
     null_ls.builtins.diagnostics.phpcs, -- PHP_CodeSniffer is a script that tokenizes PHP, JavaScript and CSS files to detect violations of a defined coding standard.
