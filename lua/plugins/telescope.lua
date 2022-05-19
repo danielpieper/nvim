@@ -19,8 +19,18 @@ telescope.setup{
       stop_action = 'stop', -- | 'kill'
       disable_icons = false,
     },
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    },
   },
 }
+
+telescope.load_extension('tmuxinator')
+telescope.load_extension('fzf')
 
 map("n", "<C-p>", ":lua require('telescope.builtin').git_files{}<CR>", 'Find Git Files', {silent = true})
 map("n", "<M-p>", ":lua require('telescope.builtin').find_files{}<CR>", 'Find Files', {silent = true})
@@ -31,7 +41,4 @@ map("n", "<C-SPACE>", ":lua require('telescope.builtin').buffers{show_all_buffer
 map("n", "<Leader>o", ":lua require('telescope.builtin').lsp_document_symbols{}<CR>", 'Find LSP Document Symbols', {silent = true})
 map("n", "<Leader>O", ":lua require('telescope.builtin').lsp_references{}<CR>", 'Find LSP references', {silent = true})
 map("n", "<Leader>ff", ":lua require('telescope.builtin').builtin{}<CR>", 'Telescope', {silent = true})
-
-require('telescope').load_extension('tmuxinator')
 map("n", "<C-t>", ":lua require('telescope').extensions.tmuxinator.projects(require('telescope.themes').get_dropdown({}))<CR>", 'Tmuxinator Projects', {silent = true})
-

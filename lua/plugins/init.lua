@@ -214,7 +214,7 @@ return require('packer').startup {
         -- Finding and replacing
         -- *****************************************
         use {
-            'https://github.com/nvim-lua/telescope.nvim',
+            'https://github.com/nvim-telescope/telescope.nvim',
             disable = false,
             config = 'require("plugins.telescope")',
             requires = {
@@ -223,6 +223,7 @@ return require('packer').startup {
                 'https://github.com/nvim-telescope/telescope-symbols.nvim', -- telescope-symbols provide its users with the ability of picking symbols and insert them at point.
                 'https://github.com/danielpieper/telescope-tmuxinator.nvim', -- Integration for tmuxinator with telescope.nvim.
                 -- '~/projects/telescope-tmuxinator.nvim',
+                { 'https://github.com/nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- FZF sorter for telescope written in c 
             }
         }
         use {
