@@ -277,29 +277,20 @@ return require('packer').startup {
         -- Testing & debugging
         -- *****************************************
         use {
-            'https://github.com/tpope/vim-dispatch',
-            opt = true,
-            cmd = {'Dispatch', 'Make', 'Focus', 'Start'},
-        } -- Asynchronous build and test dispatcher
-        use {
-            'https://github.com/janko/vim-test',
-            opt = true,
-            cmd = { 'TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit' },
-            keys = {
-              '<Leader>tt',
-              '<Leader>tf',
-              '<Leader>ts',
-              '<Leader>tl',
-              '<Leader><Leader>tt',
-              '<Leader><Leader>tf',
-              '<Leader><Leader>ts',
-              '<Leader><Leader>tl',
-              '<Leader>tv',
-            },
-            config = 'require("plugins.vim-test")',
-            requires = {
+          'https://github.com/rcarriga/neotest',
+          config = 'require("plugins.neotest")',
+          requires = {
+            'https://github.com/nvim-lua/plenary.nvim', -- plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
+            'https://github.com/nvim-treesitter/nvim-treesitter', -- Nvim Treesitter configurations and abstraction layer
+            'https://github.com/antoinemadec/FixCursorHold.nvim', -- Fix CursorHold Performance.
+            {
+              'https://github.com/rcarriga/neotest-vim-test',
+              requires = {
+                'https://github.com/janko/vim-test', -- Run your tests at the speed of thought
                 'https://github.com/tpope/vim-dispatch', -- Asynchronous build and test dispatcher
-            }
-        } -- Run your tests at the speed of thought
+              },
+            } -- Neotest adapter for vim-test
+          }
+        } -- An extensible framework for interacting with tests within NeoVim.
     end
 }
