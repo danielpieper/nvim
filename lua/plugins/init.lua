@@ -283,13 +283,14 @@ return require('packer').startup {
             'https://github.com/nvim-lua/plenary.nvim', -- plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
             'https://github.com/nvim-treesitter/nvim-treesitter', -- Nvim Treesitter configurations and abstraction layer
             'https://github.com/antoinemadec/FixCursorHold.nvim', -- Fix CursorHold Performance.
-            {
-              'https://github.com/rcarriga/neotest-vim-test',
-              requires = {
-                'https://github.com/janko/vim-test', -- Run your tests at the speed of thought
-                'https://github.com/tpope/vim-dispatch', -- Asynchronous build and test dispatcher
-              },
-            } -- Neotest adapter for vim-test
+            'https://github.com/nvim-neotest/neotest-go', -- This plugin provides a go(lang) adapter for the Neotest framework.
+            -- {
+            --   'https://github.com/rcarriga/neotest-vim-test',
+            --   requires = {
+            --     'https://github.com/janko/vim-test', -- Run your tests at the speed of thought
+            --     'https://github.com/tpope/vim-dispatch', -- Asynchronous build and test dispatcher
+            --   },
+            -- } -- Neotest adapter for vim-test
           }
         } -- An extensible framework for interacting with tests within NeoVim.
     end

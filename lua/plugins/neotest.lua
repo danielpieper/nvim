@@ -2,7 +2,8 @@ local utils = require("utils")
 
 require("neotest").setup({
   adapters = {
-    require("neotest-vim-test"),
+    require('neotest-go'),
+    -- require("neotest-vim-test"),
   }
 })
 
