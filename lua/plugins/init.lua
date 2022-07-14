@@ -95,7 +95,10 @@ return require('packer').startup {
         } -- EditorConfig plugin for Vim http://editorconfig.org
         use 'https://github.com/tpope/vim-unimpaired' -- complementary pairs of mappings.
         use 'https://github.com/tpope/vim-eunuch' -- Vim sugar for the UNIX shell commands that need it the most.
-        use 'https://github.com/tpope/vim-surround' -- ysiw' | ds{ds)  provides mappings to easily delete, change and add such surroundings in pairs
+        use {
+            'https://github.com/kylechui/nvim-surround',
+            config = 'require("plugins.nvim-surround")'
+        } -- Add/change/delete surrounding delimiter pairs with ease. Written with heart in Lua.
         use 'https://github.com/ConradIrwin/vim-bracketed-paste' -- Improve pasting code from the clipboard
         use 'https://github.com/tpope/vim-repeat' -- Repeat.vim remaps . in a way that plugins can tap into it
         use {
