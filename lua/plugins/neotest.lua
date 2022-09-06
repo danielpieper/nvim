@@ -18,7 +18,7 @@ vim.diagnostic.config({
 require("neotest").setup({
   adapters = {
     require('neotest-go'),
-    -- require("neotest-vim-test"),
+    require("neotest-vim-test")({ allow_file_types = { "php" } }),
   }
 })
 
