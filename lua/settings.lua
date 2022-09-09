@@ -84,7 +84,7 @@ function M.other_settings()
   vim.opt.tabstop = 2
   vim.opt.shiftwidth = 2
   -- Use spaces, not tabs
-  vim.opt.expandtab = true
+  -- vim.opt.expandtab = true
   vim.opt.updatetime = 750
   -- Briefly move the cursor to the matching brace
   vim.opt.showmatch = true
