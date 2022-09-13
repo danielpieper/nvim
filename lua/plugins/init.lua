@@ -62,16 +62,17 @@ return require('packer').startup {
         -- *****************************************
         -- Git
         -- *****************************************
-        use 'https://github.com/tpope/vim-rhubarb' -- Enables :GBrowse from fugitive.vim to open GitHub URLs.
-        use 'https://github.com/shumphrey/fugitive-gitlab.vim' -- An extension to fugitive.vim for gitlab support
         use {
-            'https://github.com/tpope/vim-fugitive',
-            config = 'require("plugins.vim-fugitive")',
+            'https://github.com/ruifm/gitlinker.nvim',
+            config = 'require("plugins.gitlinker-nvim")',
             requires = {
-                'https://github.com/shumphrey/fugitive-gitlab.vim', -- An extension to fugitive.vim for gitlab support
-                'https://github.com/tpope/vim-rhubarb', -- Enables :GBrowse from fugitive.vim to open GitHub URLs.
+                'https://github.com/nvim-lua/plenary.nvim', -- All the lua functions I don't want to write twice.
             },
-        } -- fugitive.vim: A Git wrapper so awesome, it should be illegal
+        } -- A lua neovim plugin to generate shareable file permalinks
+        use {
+            'https://github.com/f-person/git-blame.nvim',
+            config = 'require("plugins.git-blame-nvim")',
+        } -- Git Blame plugin for Neovim written in Lua
         use {
             'https://github.com/lewis6991/gitsigns.nvim',
             branch = 'main',
