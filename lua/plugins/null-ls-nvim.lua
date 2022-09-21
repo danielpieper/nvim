@@ -1,11 +1,14 @@
 local null_ls = require("null-ls")
 
+-- TODO: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
+
 null_ls.setup({
   -- debug = true,
   diagnostics_format = "#{m} (#{s})",
   sources = {
     null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
     null_ls.builtins.formatting.gofumpt, -- Enforce a stricter format than gofmt, while being backwards compatible.
+    null_ls.builtins.formatting.goimports, -- Updates your Go import lines, adding missing ones and removing unreferenced ones.
     null_ls.builtins.diagnostics.eslint, -- Fixes problems in your JavaScript code.
 
     null_ls.builtins.completion.spell.with({
