@@ -28,8 +28,3 @@ wkmap("n", "<Left>", ":exe 'vertical resize ' . (winwidth(0) * 2/3)<CR>", "Resiz
 
 -- close all windows
 wkmap("n", "ZZ", ":qa<CR>", "quit closing all windows", {silent=true})
-
--- Copy git repo url to file and marked text
-wkmap("n", "<Leader>G", ":GBrowse!<CR>", "Copy git repo url", {silent=true})
-wkmap("v", "<Leader>G", ":GBrowse!<CR>", "Copy git repo url for lines", {silent=true})
-
