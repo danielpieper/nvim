@@ -70,10 +70,6 @@ return require('packer').startup {
             },
         } -- A lua neovim plugin to generate shareable file permalinks
         use {
-            'https://github.com/f-person/git-blame.nvim',
-            config = 'require("plugins.git-blame-nvim")',
-        } -- Git Blame plugin for Neovim written in Lua
-        use {
             'https://github.com/lewis6991/gitsigns.nvim',
             branch = 'main',
             config = 'require("plugins.gitsigns-nvim")',
