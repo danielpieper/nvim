@@ -6,12 +6,12 @@ vim.o.listchars = "tab:▏ "
 vim.g.indentLine_fileTypeExclude = { 'dashboard' }
 vim.g.indentLine_bufTypeExclude = { 'help', 'terminal' }
 
-local jsonConcealGroup = vim.api.nvim_create_augroup("JsonConcealGroup", { clear = true })
-vim.api.nvim_create_autocmd("InsertEnter jsonc,json", {
+local indentLineConcealGroup = vim.api.nvim_create_augroup("IndenLineConcealGroup", { clear = true })
+vim.api.nvim_create_autocmd("InsertEnter jsonc,json,markdown", {
   command = "silent! :IndentLinesDisable",
-  group = jsonConcealGroup,
+  group = indentLineConcealGroup,
 })
-vim.api.nvim_create_autocmd("InsertLeave jsonc,json", {
+vim.api.nvim_create_autocmd("InsertLeave jsonc,json,markdown", {
   command = "silent! :IndentLinesEnable",
-  group = jsonConcealGroup,
+  group = indentLineConcealGroup,
 })
