@@ -1,7 +1,7 @@
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+    vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
 end
 
 -- Only required if you have packer in your `opt` pack
@@ -10,7 +10,7 @@ vim.api.nvim_command('packadd packer.nvim')
 -- see https://github.com/rhysd/vim-startuptime
 return require('packer').startup {
     function(use)
-        use {'https://github.com/wbthomason/packer.nvim', opt = true} -- Packer can manage itself as an optional plugin
+        use { 'https://github.com/wbthomason/packer.nvim', opt = true } -- Packer can manage itself as an optional plugin
 
 
         -- *****************************************
@@ -30,12 +30,12 @@ return require('packer').startup {
             config = 'require("colorizer").setup()'
         } -- A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.
         use {
-          'https://github.com/Yggdroot/indentLine',
-          config = 'require("plugins.indentline")',
+            'https://github.com/Yggdroot/indentLine',
+            config = 'require("plugins.indentline")',
         }
         use {
-          'https://github.com/beauwilliams/focus.nvim',
-          config = 'require("plugins.focus-nvim")',
+            'https://github.com/beauwilliams/focus.nvim',
+            config = 'require("plugins.focus-nvim")',
         } -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua! Vim splits on steroids.
 
 
@@ -118,10 +118,10 @@ return require('packer').startup {
         -- Snippets
         -- *****************************************
         use 'https://github.com/rafamadriz/friendly-snippets' -- Set of preconfigured snippets for different languages.
-        use {'https://github.com/L3MON4D3/LuaSnip',
+        use { 'https://github.com/L3MON4D3/LuaSnip',
             config = 'require("plugins.luasnip")',
             requires = {
-              'https://github.com/rafamadriz/friendly-snippets' -- Set of preconfigured snippets for different languages.
+                'https://github.com/rafamadriz/friendly-snippets' -- Set of preconfigured snippets for different languages.
             }
         } -- Snippet Engine for Neovim written in Lua.
 
@@ -187,7 +187,7 @@ return require('packer').startup {
                 'https://github.com/nvim-telescope/telescope-symbols.nvim', -- telescope-symbols provide its users with the ability of picking symbols and insert them at point.
                 'https://github.com/danielpieper/telescope-tmuxinator.nvim', -- Integration for tmuxinator with telescope.nvim.
                 -- '~/projects/telescope-tmuxinator.nvim',
-                { 'https://github.com/nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- FZF sorter for telescope written in c 
+                { 'https://github.com/nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- FZF sorter for telescope written in c
             }
         }
         use {
@@ -237,7 +237,7 @@ return require('packer').startup {
         } -- This plugin handles automatically launching, initializing, and configuring language servers that are installed on your system.
         use {
             'https://github.com/jose-elias-alvarez/null-ls.nvim',
-             config = 'require("plugins.null-ls-nvim")',
+            config = 'require("plugins.null-ls-nvim")',
         } -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
         use {
             'https://github.com/j-hui/fidget.nvim',
@@ -274,21 +274,21 @@ return require('packer').startup {
         -- Testing & debugging
         -- *****************************************
         use {
-          'https://github.com/rcarriga/neotest',
-          config = 'require("plugins.neotest")',
-          requires = {
-            'https://github.com/nvim-lua/plenary.nvim', -- plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
-            'https://github.com/nvim-treesitter/nvim-treesitter', -- Nvim Treesitter configurations and abstraction layer
-            'https://github.com/antoinemadec/FixCursorHold.nvim', -- Fix CursorHold Performance.
-            'https://github.com/nvim-neotest/neotest-go', -- This plugin provides a go(lang) adapter for the Neotest framework.
-            {
-              'https://github.com/rcarriga/neotest-vim-test',
-              requires = {
-                'https://github.com/janko/vim-test', -- Run your tests at the speed of thought
-                'https://github.com/tpope/vim-dispatch', -- Asynchronous build and test dispatcher
-              },
-            } -- Neotest adapter for vim-test
-          }
+            'https://github.com/rcarriga/neotest',
+            config = 'require("plugins.neotest")',
+            requires = {
+                'https://github.com/nvim-lua/plenary.nvim', -- plenary: full; complete; entire; absolute; unqualified. All the lua functions I don't want to write twice.
+                'https://github.com/nvim-treesitter/nvim-treesitter', -- Nvim Treesitter configurations and abstraction layer
+                'https://github.com/antoinemadec/FixCursorHold.nvim', -- Fix CursorHold Performance.
+                'https://github.com/nvim-neotest/neotest-go', -- This plugin provides a go(lang) adapter for the Neotest framework.
+                {
+                    'https://github.com/rcarriga/neotest-vim-test',
+                    requires = {
+                        'https://github.com/janko/vim-test', -- Run your tests at the speed of thought
+                        'https://github.com/tpope/vim-dispatch', -- Asynchronous build and test dispatcher
+                    },
+                } -- Neotest adapter for vim-test
+            }
         } -- An extensible framework for interacting with tests within NeoVim.
     end
 }

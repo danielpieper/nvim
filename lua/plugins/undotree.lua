@@ -6,4 +6,4 @@ g.undotree_SplitWidth = 45
 g.undotree_WindowLayout = 4
 -- g.undotree_DiffpanelHeight = 10
 
-map("n", "<F4>", ":UndotreeToggle<CR>", {silent = true})
+map("n", "<F4>", ":UndotreeToggle<CR>", { silent = true })

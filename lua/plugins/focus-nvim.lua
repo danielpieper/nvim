@@ -1,4 +1,4 @@
 require("focus").setup({
-  hybridnumber = true,
-  cursorline = false,
+    hybridnumber = true,
+    cursorline = false,
 })

@@ -8,5 +8,5 @@ config.configure_language("default", {
 
 config.configure_language("php", {
     single_line_comment_string = "//",
-    multi_line_comment_strings = {"/*", "*/"},
+    multi_line_comment_strings = { "/*", "*/" },
 })

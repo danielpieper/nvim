@@ -8,10 +8,10 @@ vim.g.indentLine_bufTypeExclude = { 'help', 'terminal' }
 
 local indentLineConcealGroup = vim.api.nvim_create_augroup("IndenLineConcealGroup", { clear = true })
 vim.api.nvim_create_autocmd("InsertEnter jsonc,json,markdown", {
-  command = "silent! :IndentLinesDisable",
-  group = indentLineConcealGroup,
+    command = "silent! :IndentLinesDisable",
+    group = indentLineConcealGroup,
 })
 vim.api.nvim_create_autocmd("InsertLeave jsonc,json,markdown", {
-  command = "silent! :IndentLinesEnable",
-  group = indentLineConcealGroup,
+    command = "silent! :IndentLinesEnable",
+    group = indentLineConcealGroup,
 })

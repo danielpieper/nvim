@@ -66,11 +66,10 @@ vim.api.nvim_command([[
 ]])
 
 utils.augroup(
-  'on_change_colorscheme',
-  function ()
-    vim.api.nvim_command('autocmd ColorScheme * call s:base16_customize()')
-  end
+    'on_change_colorscheme',
+    function()
+        vim.api.nvim_command('autocmd ColorScheme * call s:base16_customize()')
+    end
 )
 
 vim.api.nvim_command("colorscheme base16-arc")
-
