@@ -30,7 +30,7 @@ if is_mac then
             args = {
                 "run",
                 "--disable-all",
-                "--enable=govet,deadcode,gofmt,goimports,ineffassign,misspell,unconvert,revive,rowserrcheck,sqlclosecheck,bodyclose,staticcheck,exhaustive,gomodguard,depguard,exportloopref,errname,lll",
+                "--enable govet,deadcode,gofmt,goimports,ineffassign,misspell,unconvert,revive,rowserrcheck,sqlclosecheck,bodyclose,staticcheck,exhaustive,gomodguard,depguard,exportloopref,errname,lll",
                 "--deadline 5m",
                 "--out-format json",
                 "$DIRNAME",
