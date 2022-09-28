@@ -24,7 +24,7 @@ vim.api.nvim_command([[
     highlight TelescopeResultsBorder             guifg=#5c6370
     highlight TelescopePreviewBorder             guifg=#5c6370
 
-    highlight PmenuSel                           guibg=#56b6c2
+    highlight PmenuSel                           guibg=#61afef
     " highlight Constant                           guifg=#d19a66
 
     " highlights for indent lines:
@@ -40,14 +40,15 @@ vim.api.nvim_command([[
 
     highlight LspDiagnosticsDefaultError         guifg=Red    guibg=none
     highlight LspDiagnosticsDefaultWarning       guifg=Yellow guibg=none
-    highlight LspDiagnosticsDefaultInformation   guifg=LightBlue  guibg=none
+    highlight LspDiagnosticsDefaultInformation   guifg=#61afef  guibg=none
     highlight LspDiagnosticsDefaultHint          guifg=LightGray  guibg=none
 
     highlight LspDiagnosticsUnderlineError       gui=undercurl    guisp=#e06c75    guibg=none
     highlight LspDiagnosticsUnderlineWarning     gui=undercurl    guisp=#e5c07b guibg=none
-    highlight LspDiagnosticsUnderlineInformation gui=undercurl    guisp=LightBlue  guibg=none
+    highlight LspDiagnosticsUnderlineInformation gui=undercurl    guisp=#61afef  guibg=none
     highlight LspDiagnosticsUnderlineHint        gui=undercurl    guisp=LightGray  guibg=none
 
+    highlight BufferCurrent                      guifg=#61afef guibg=#1D1F21
     highlight BufferVisible                      guibg=#1D1F21
     highlight BufferVisibleIcon                  guibg=#1D1F21
     highlight BufferVisibleMod                   guibg=#1D1F21
@@ -60,7 +61,7 @@ vim.api.nvim_command([[
     highlight rainbowcol3                        guifg=#d193e4
     highlight rainbowcol4                        guifg=#adcf94
     highlight rainbowcol5                        guifg=#78c5ce
-    highlight rainbowcol6                        guifg=#81bff2
+    highlight rainbowcol6                        guifg=#61afef
     highlight rainbowcol7                        guifg=#e68991
   endfunction
 ]])
