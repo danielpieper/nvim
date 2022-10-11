@@ -103,13 +103,14 @@ cmp.setup.cmdline(':', {
 })
 
 local highlights = {
-    PmenuSel = { bg = "#282C34", fg = "NONE" },
+    -- PmenuSel = { bg = "#282C34", fg = "none" },
+    PmenuSel = { bg = "#61afef", fg = "#1D1F21" },
     Pmenu = { fg = "#C5CDD9", bg = "#1D1F21" },
 
-    CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "NONE", strikethrough = true },
-    CmpItemAbbrMatch = { fg = "#61afef", bg = "NONE", bold = true },
-    CmpItemAbbrMatchFuzzy = { fg = "#61afef", bg = "NONE", bold = true },
-    CmpItemMenu = { fg = "#C792EA", bg = "NONE", italic = true },
+    CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "none", strikethrough = true },
+    CmpItemAbbrMatch = { fg = "#61afef", bg = "none", bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = "#61afef", bg = "none", bold = true },
+    CmpItemMenu = { fg = "#C792EA", bg = "none", italic = true },
 
     CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
     CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
