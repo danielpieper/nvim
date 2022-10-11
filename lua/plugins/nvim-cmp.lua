@@ -1,3 +1,4 @@
+local c = require("colors")
 local cmp = require('cmp')
 local luasnip = require("luasnip")
 
@@ -104,46 +105,46 @@ cmp.setup.cmdline(':', {
 
 local highlights = {
     -- PmenuSel = { bg = "#282C34", fg = "none" },
-    PmenuSel = { bg = "#61afef", fg = "#1D1F21" },
-    Pmenu = { fg = "#C5CDD9", bg = "#1D1F21" },
+    PmenuSel = { bg = c.base0D, fg = c.base00 },
+    Pmenu = { fg = c.base07, bg = c.base00 },
 
-    CmpItemAbbrDeprecated = { fg = "#7E8294", bg = "none", strikethrough = true },
-    CmpItemAbbrMatch = { fg = "#61afef", bg = "none", bold = true },
-    CmpItemAbbrMatchFuzzy = { fg = "#61afef", bg = "none", bold = true },
-    CmpItemMenu = { fg = "#C792EA", bg = "none", italic = true },
+    CmpItemAbbrDeprecated = { fg = c.base03, bg = "none", strikethrough = true },
+    CmpItemAbbrMatch = { fg = c.base0D, bg = "none", bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = c.base0D, bg = "none", bold = true },
+    CmpItemMenu = { fg = c.base0A, bg = "none", italic = true },
 
-    CmpItemKindField = { fg = "#EED8DA", bg = "#B5585F" },
-    CmpItemKindProperty = { fg = "#EED8DA", bg = "#B5585F" },
-    CmpItemKindEvent = { fg = "#EED8DA", bg = "#B5585F" },
+    CmpItemKindField = { fg = c.base01, bg = c.base0E },
+    CmpItemKindProperty = { fg = c.base01, bg = c.base0E },
+    CmpItemKindEvent = { fg = c.base01, bg = c.base0E },
 
-    CmpItemKindText = { fg = "#C3E88D", bg = "#9FBD73" },
-    CmpItemKindEnum = { fg = "#C3E88D", bg = "#9FBD73" },
-    CmpItemKindKeyword = { fg = "#C3E88D", bg = "#9FBD73" },
+    CmpItemKindText = { fg = c.base01, bg = c.base0B },
+    CmpItemKindEnum = { fg = c.base01, bg = c.base0B },
+    CmpItemKindKeyword = { fg = c.base01, bg = c.base0B },
 
-    CmpItemKindConstant = { fg = "#FFE082", bg = "#D4BB6C" },
-    CmpItemKindConstructor = { fg = "#FFE082", bg = "#D4BB6C" },
-    CmpItemKindReference = { fg = "#FFE082", bg = "#D4BB6C" },
+    CmpItemKindConstant = { fg = c.base01, bg = c.base08 },
+    CmpItemKindConstructor = { fg = c.base01, bg = c.base08 },
+    CmpItemKindReference = { fg = c.base01, bg = c.base08 },
 
-    CmpItemKindFunction = { fg = "#EADFF0", bg = "#A377BF" },
-    CmpItemKindStruct = { fg = "#EADFF0", bg = "#A377BF" },
-    CmpItemKindClass = { fg = "#EADFF0", bg = "#A377BF" },
-    CmpItemKindModule = { fg = "#EADFF0", bg = "#A377BF" },
-    CmpItemKindOperator = { fg = "#EADFF0", bg = "#A377BF" },
+    CmpItemKindFunction = { fg = c.base01, bg = c.base0A },
+    CmpItemKindStruct = { fg = c.base01, bg = c.base0A },
+    CmpItemKindClass = { fg = c.base01, bg = c.base0A },
+    CmpItemKindModule = { fg = c.base01, bg = c.base0A },
+    CmpItemKindOperator = { fg = c.base01, bg = c.base0A },
 
-    CmpItemKindVariable = { fg = "#C5CDD9", bg = "#7E8294" },
-    CmpItemKindFile = { fg = "#C5CDD9", bg = "#7E8294" },
+    CmpItemKindVariable = { fg = c.base01, bg = c.base04 },
+    CmpItemKindFile = { fg = c.base01, bg = c.base04 },
 
-    CmpItemKindUnit = { fg = "#F5EBD9", bg = "#D4A959" },
-    CmpItemKindSnippet = { fg = "#F5EBD9", bg = "#D4A959" },
-    CmpItemKindFolder = { fg = "#F5EBD9", bg = "#D4A959" },
+    CmpItemKindUnit = { fg = c.base01, bg = c.base09 },
+    CmpItemKindSnippet = { fg = c.base01, bg = c.base09 },
+    CmpItemKindFolder = { fg = c.base01, bg = c.base09 },
 
-    CmpItemKindMethod = { fg = "#DDE5F5", bg = "#6C8ED4" },
-    CmpItemKindValue = { fg = "#DDE5F5", bg = "#6C8ED4" },
-    CmpItemKindEnumMember = { fg = "#DDE5F5", bg = "#6C8ED4" },
+    CmpItemKindMethod = { fg = c.base01, bg = c.base0D },
+    CmpItemKindValue = { fg = c.base01, bg = c.base0D },
+    CmpItemKindEnumMember = { fg = c.base01, bg = c.base0D },
 
-    CmpItemKindInterface = { fg = "#D8EEEB", bg = "#58B5A8" },
-    CmpItemKindColor = { fg = "#D8EEEB", bg = "#58B5A8" },
-    CmpItemKindTypeParameter = { fg = "#D8EEEB", bg = "#58B5A8" },
+    CmpItemKindInterface = { fg = c.base01, bg = c.base0C },
+    CmpItemKindColor = { fg = c.base01, bg = c.base0C },
+    CmpItemKindTypeParameter = { fg = c.base01, bg = c.base0C },
 }
 
 vim.api.nvim_create_autocmd("Colorscheme", {
