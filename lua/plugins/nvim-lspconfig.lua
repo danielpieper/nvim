@@ -139,7 +139,6 @@ local servers = {
                 },
                 staticcheck = true,
                 ["formatting.gofumpt"] = not is_mac,
-                ["codelenses.usePlaceholders"] = true,
             },
         },
     },
