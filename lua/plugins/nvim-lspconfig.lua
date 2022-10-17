@@ -209,13 +209,13 @@ local servers = {
     },
 }
 
+local capabilities = cmp_nvim_lsp.default_capabilities()
 for server, config in pairs(servers) do
     config.on_attach = on_attach
 
     -- config.log_level = vim.lsp.protocol.MessageType.Log;
     config.message_level = vim.lsp.protocol.MessageType.Log;
-    config.capabilities = config.capabilities or vim.lsp.protocol.make_client_capabilities()
-    config.capabilities = cmp_nvim_lsp.update_capabilities(config.capabilities)
+    config.capabilities = capabilities
 
     lspconfig[server].setup(config)
 end
