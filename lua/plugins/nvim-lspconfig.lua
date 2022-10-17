@@ -213,6 +213,19 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 for server, config in pairs(servers) do
     config.on_attach = on_attach
 
+    -- don't mess with helm templates
+    if server == "yamlls" then
+        config.on_attach = function(client, bufnr)
+            if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+                vim.diagnostic.disable(bufnr)
+                vim.defer_fn(function()
+                    vim.diagnostic.reset(nil, bufnr)
+                end, 1000)
+            end
+            on_attach(client, bufnr)
+        end
+    end
+
     -- config.log_level = vim.lsp.protocol.MessageType.Log;
     config.message_level = vim.lsp.protocol.MessageType.Log;
     config.capabilities = capabilities
