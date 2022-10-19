@@ -189,7 +189,7 @@ return require('packer').startup {
                 -- '~/projects/telescope-tmuxinator.nvim',
                 { 'https://github.com/nvim-telescope/telescope-fzf-native.nvim', run = 'make' }, -- FZF sorter for telescope written in c
             }
-        }
+        } -- Find, Filter, Preview, Pick. All lua, all the time.
         use {
             'https://github.com/folke/which-key.nvim',
             config = 'require("plugins.which-key")',
@@ -233,6 +233,7 @@ return require('packer').startup {
                 'https://github.com/ray-x/lsp_signature.nvim', -- lsp signature hint when you type
                 'https://github.com/lspcontainers/lspcontainers.nvim', -- Neovim plugin for lspcontainers.
                 'https://github.com/hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim builtin LSP client
+                'https://github.com/nvim-telescope/telescope.nvim', -- Find, Filter, Preview, Pick. All lua, all the time.
             }
         } -- This plugin handles automatically launching, initializing, and configuring language servers that are installed on your system.
         use {

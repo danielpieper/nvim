@@ -38,7 +38,5 @@ map("n", "π", ":lua require('telescope.builtin').find_files{}<CR>", 'Find Files
 map("n", "<BS>", ":lua require('telescope.builtin').command_history{}<CR>", 'Command History', { silent = true })
 map("n", "<C-f>", ":lua require('telescope.builtin').live_grep{}<CR>", 'Live grep', { silent = true })
 map("n", "<C-SPACE>", ":lua require('telescope.builtin').buffers{show_all_buffers = true}<CR>", 'Find Buffers', { silent = true }) -- Show unloaded buffers aswell
-map("n", "<Leader>o", ":lua require('telescope.builtin').lsp_document_symbols{}<CR>", 'Find LSP Document Symbols', { silent = true })
-map("n", "<Leader>O", ":lua require('telescope.builtin').lsp_references{}<CR>", 'Find LSP references', { silent = true })
 map("n", "<Leader>ff", ":lua require('telescope.builtin').builtin{}<CR>", 'Telescope', { silent = true })
 map("n", "<C-t>", ":lua require('telescope').extensions.tmuxinator.projects(require('telescope.themes').get_dropdown({}))<CR>", 'Tmuxinator Projects', { silent = true })

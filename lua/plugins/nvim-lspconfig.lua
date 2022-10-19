@@ -42,12 +42,14 @@ local on_attach = function(client, bufnr)
     -- Keybindings for LSPs
     local opts = { noremap = true, silent = true }
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<S-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd", ":lua require('telescope.builtin').lsp_definitions{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gi", ":lua require('telescope.builtin').lsp_implementations{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gt", ":lua require('telescope.builtin').lsp_type_definitions{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", ":lua require('telescope.builtin').lsp_references{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>o", ":lua require('telescope.builtin').lsp_document_symbols{}<CR>", opts)
 
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gR", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
