@@ -2,6 +2,7 @@ local c = require("colors")
 local highlights = {
     LineNr = { bg = "none", fg = c.base03 },
     CursorLineNr = { bg = "none" },
+    Error = { bg = "none", fg = c.base0E },
 
     SignColumn = { bg = "none" },
     VertSplit = { fg = c.base01, bg = "none" },

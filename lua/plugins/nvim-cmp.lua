@@ -147,6 +147,10 @@ local highlights = {
     CmpItemKindTypeParameter = { fg = c.base01, bg = c.base0C },
 }
 
+for name, hi in pairs(highlights) do
+    vim.api.nvim_set_hl(0, name, hi)
+end
+
 vim.api.nvim_create_autocmd("Colorscheme", {
     callback = function()
         for name, hi in pairs(highlights) do
