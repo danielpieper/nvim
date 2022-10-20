@@ -21,8 +21,6 @@ local highlights = {
     TelescopePromptBorder = { fg = c.base03 },
     TelescopeResultsBorder = { fg = c.base03 },
     TelescopePreviewBorder = { fg = c.base03 },
-
-    -- PmenuSel = { bg = c.base0D },
     -- Constant = { fg = c.base09 },
 
     -- highlights for indent lines:

@@ -104,9 +104,13 @@ cmp.setup.cmdline(':', {
 })
 
 local highlights = {
-    -- PmenuSel = { bg = "#282C34", fg = "none" },
-    PmenuSel = { bg = c.base0D, fg = c.base00 },
-    Pmenu = { fg = c.base07, bg = c.base00 },
+    -- :so $VIMRUNTIME/syntax/hitest.vim
+
+    PmenuSel = { bg = "#282C34", fg = "NONE" },
+    Pmenu = { fg = "#C5CDD9", bg = "#22252A" },
+
+    -- PmenuSel = { bg = c.base03, fg = "none" },
+    -- Pmenu = { fg = c.base07, bg = c.base01 },
 
     CmpItemAbbrDeprecated = { fg = c.base03, bg = "none", strikethrough = true },
     CmpItemAbbrMatch = { fg = c.base0D, bg = "none", bold = true },

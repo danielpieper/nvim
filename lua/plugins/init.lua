@@ -22,7 +22,6 @@ return require('packer').startup {
             branch = 'main',
             config = 'require("plugins.base16-arc")',
         } -- A base16 colorscheme.
-        use 'https://github.com/folke/lsp-colors.nvim' -- Automatically creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin lsp client.
         use 'https://github.com/psliwka/vim-smoothie' -- Smooth scrolling for Vim done right🥤
         use 'https://github.com/camspiers/animate.vim' -- A Vim Window Animation Library
         use {
