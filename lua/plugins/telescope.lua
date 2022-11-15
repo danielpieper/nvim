@@ -12,6 +12,10 @@ telescope.setup {
                 ["œ"] = actions.send_selected_to_qflist + actions.open_qflist, -- <M-q> on darwin...
             },
         },
+        layout_config = {
+            height = 0.95,
+            width = 0.95,
+        },
     },
     extensions = {
         tmuxinator = {
