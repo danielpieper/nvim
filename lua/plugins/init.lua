@@ -90,7 +90,6 @@ return require('packer').startup {
             config = 'require("plugins.editorconfig-vim")'
         } -- EditorConfig plugin for Vim http://editorconfig.org
         use 'https://github.com/tpope/vim-unimpaired' -- complementary pairs of mappings.
-        use 'https://github.com/tpope/vim-eunuch' -- Vim sugar for the UNIX shell commands that need it the most.
         use {
             'https://github.com/kylechui/nvim-surround',
             config = 'require("plugins.nvim-surround")'
