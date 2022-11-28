@@ -6,6 +6,7 @@ function utils.load_variables()
     utils.is_mac      = jit.os == 'OSX'
     utils.is_linux    = jit.os == 'Linux'
     utils.is_windows  = jit.os == 'Windows'
+    utils.is_work     = vim.fn.hostname() == 'superdraco'
     utils.vim_path    = home .. path_sep .. '.config' .. path_sep .. 'nvim'
     utils.cache_dir   = home .. path_sep .. '.cache' .. path_sep .. 'nvim'
     utils.modules_dir = utils.vim_path .. path_sep .. 'modules'

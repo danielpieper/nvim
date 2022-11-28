@@ -3,7 +3,7 @@ local configs = require('lspconfig.configs')
 local lsp_signature = require('lsp_signature')
 local lspcontainers = require('lspcontainers')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
-local is_mac = require("utils").is_mac
+local is_work = require("utils").is_work
 
 -- Set log level
 -- Levels by name: "trace", "debug", "info", "warn", "error"
@@ -140,7 +140,7 @@ local servers = {
                     unusedparams = true,
                 },
                 staticcheck = true,
-                ["formatting.gofumpt"] = not is_mac,
+                ["formatting.gofumpt"] = not is_work,
             },
         },
     },
