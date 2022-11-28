@@ -165,13 +165,6 @@ return require('packer').startup {
                 'https://github.com/kyazdani42/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
             }
         } -- A File Explorer For Neovim Written In Lua
-        use {
-            'https://github.com/mbbill/undotree',
-            opt = true,
-            cmd = { 'UndotreeToggle', 'UndotreeHide', 'UndotreeShow', 'UndotreeFocus' },
-            keys = '<F4>',
-            config = 'require("plugins.undotree")',
-        } -- Undo visualise
 
 
         -- *****************************************
