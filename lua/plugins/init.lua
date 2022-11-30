@@ -210,7 +210,6 @@ return require('packer').startup {
                 'https://github.com/onsails/lspkind-nvim', -- This tiny plugin adds vscode-like pictograms to neovim built-in lsp completion
                 'https://github.com/L3MON4D3/LuaSnip',
                 'https://github.com/saadparwaiz1/cmp_luasnip', -- luasnip completion source for nvim-cmp
-                'https://github.com/hrsh7th/cmp-nvim-lsp-signature-help', -- nvim-cmp source for displaying function signatures with the current parameter emphasized
                 'https://github.com/hrsh7th/cmp-cmdline', -- nvim-cmp source for vim's cmdline.
                 'https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol', -- The purpose is the demonstration customize / search by nvim-cmp.
             }
