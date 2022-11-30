@@ -17,6 +17,16 @@ telescope.setup {
             width = 0.95,
         },
     },
+    pickers = {
+        lsp_references = { fname_width = 50 },
+        lsp_incoming_calls = { fname_width = 50 },
+        lsp_outgoing_calls = { fname_width = 50 },
+        lsp_definitions = { fname_width = 50 },
+        lsp_type_definitions = { fname_width = 50 },
+        lsp_implementations = { fname_width = 50 },
+        lsp_document_symbols = { fname_width = 50 },
+        lsp_workspace_symbols = { fname_width = 50 },
+    },
     extensions = {
         tmuxinator = {
             select_action = 'switch', -- | 'stop' | 'kill'
