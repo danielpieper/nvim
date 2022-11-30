@@ -53,4 +53,8 @@ map("n", "<BS>", ":lua require('telescope.builtin').command_history{}<CR>", 'Com
 map("n", "<C-f>", ":lua require('telescope.builtin').live_grep{}<CR>", 'Live grep', { silent = true })
 map("n", "<C-SPACE>", ":lua require('telescope.builtin').buffers{show_all_buffers = true}<CR>", 'Find Buffers', { silent = true }) -- Show unloaded buffers aswell
 map("n", "<Leader>ff", ":lua require('telescope.builtin').builtin{}<CR>", 'Telescope', { silent = true })
+map("n", "<Leader>fr", ":lua require('telescope.builtin').resume{}<CR>", 'Telescope Resume', { silent = true })
+map("n", "<Leader>fgs", ":lua require('telescope.builtin').git_status{}<CR>", 'Telescope Git Status', { silent = true })
+map("n", "<Leader>fgc", ":lua require('telescope.builtin').git_commits{}<CR>", 'Telescope Git Commits', { silent = true })
+map("n", "<Leader>fgbr", ":lua require('telescope.builtin').git_branches{}<CR>", 'Telescope Git Branches', { silent = true })
 map("n", "<C-t>", ":lua require('telescope').extensions.tmuxinator.projects(require('telescope.themes').get_dropdown({}))<CR>", 'Tmuxinator Projects', { silent = true })
