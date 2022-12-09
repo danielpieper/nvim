@@ -46,10 +46,13 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<S-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gd", ":lua require('telescope.builtin').lsp_definitions{}<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gi", ":lua require('telescope.builtin').lsp_implementations{}<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gt", ":lua require('telescope.builtin').lsp_type_definitions{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gi", ":lua require('telescope.builtin').lsp_implementations{}<CR>",
+        opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gt", ":lua require('telescope.builtin').lsp_type_definitions{}<CR>"
+        , opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", ":lua require('telescope.builtin').lsp_references{}<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>o", ":lua require('telescope.builtin').lsp_document_symbols{}<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>o", ":lua require('telescope.builtin').lsp_document_symbols{}<CR>",
+        opts)
 
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gR", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
@@ -62,9 +65,9 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "]c", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
     -- Set some keybinds conditional on server capabilities
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
         vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gf", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
-    elseif client.resolved_capabilities.document_range_formatting then
+    elseif client.server_capabilities.document_range_formatting then
         vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gf", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
     end
 
@@ -81,7 +84,7 @@ local on_attach = function(client, bufnr)
     end
 
     -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.api.nvim_exec([[
       augroup lsp_document_highlight
         autocmd! * <buffer>
