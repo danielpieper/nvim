@@ -284,5 +284,8 @@ return require('packer').startup {
                 } -- Neotest adapter for vim-test
             }
         } -- An extensible framework for interacting with tests within NeoVim.
+        use {
+            'https://github.com/sebdah/vim-delve',
+        } -- Neovim / Vim integration for Delve
     end
 }
