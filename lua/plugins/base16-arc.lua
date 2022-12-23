@@ -22,6 +22,7 @@ local highlights = {
     TelescopeResultsBorder = { fg = c.base03 },
     TelescopePreviewBorder = { fg = c.base03 },
     -- Constant = { fg = c.base09 },
+    ["@variable"] = { fg = c.base04 },
 
     -- highlights for indent lines:
     Conceal = { fg = c.base02 },
