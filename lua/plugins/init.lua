@@ -50,8 +50,8 @@ return require('packer').startup {
         } -- Nvim Treesitter configurations and abstraction layer
         use {
             'https://github.com/nvim-treesitter/playground',
-            disable = false,
-        } -- Treesitter playground integrated into Neovim :TSHighlightCapturesUnderCursor
+            disable = true,
+        } -- Treesitter playground integrated into Neovim
         use {
             'https://github.com/p00f/nvim-ts-rainbow',
             config = 'require("plugins.nvim-ts-rainbow")',

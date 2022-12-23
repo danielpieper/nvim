@@ -31,7 +31,6 @@ end
 
 -- which-key map
 function utils.wkmap(mode, key, result, name, opts)
-    -- if packer_plugins["which-key.nvim"] and packer_plugins["which-key.nvim"].loaded then
     if utils.isModuleAvailable("which-key") then
         local wk = require("which-key")
         wk.register(

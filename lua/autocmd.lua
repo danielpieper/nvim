@@ -60,21 +60,6 @@ local aucmd_dict = {
             end,
         },
     },
-    -- ["FocusGained,BufEnter"] = {
-    --     {
-    --         -- Periodically check for file changes
-    --         -- see https://vi.stackexchange.com/a/13092
-    --         pattern = "*",
-    --         command = ":silent! checktime",
-    --     },
-    -- },
-    -- VimResized = {
-    --     {
-    --         -- Resize splits when vim changes size (like with tmux opening/closing)
-    --         pattern = "*",
-    --         command = "wincmd =",
-    --     },
-    -- },
 }
 
 for event, opt_tbls in pairs(aucmd_dict) do
