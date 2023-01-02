@@ -1,5 +1,5 @@
 local null_ls = require("null-ls")
-local is_mac = require("utils").is_mac
+local is_work = require("utils").is_work
 
 local sources = {
     -- null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
@@ -23,7 +23,7 @@ local sources = {
     }), -- PHP static analysis tool.
 }
 
-if is_mac then
+if is_work then
     table.insert(
         sources,
         null_ls.builtins.diagnostics.golangci_lint.with({
