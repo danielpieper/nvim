@@ -108,6 +108,10 @@ return require('packer').startup {
             opt = true,
             cmd = 'EasyAlign',
         } -- A simple, easy-to-use Vim alignment plugin.
+        use {
+            'https://github.com/ojroques/nvim-osc52',
+            config = 'require("plugins.nvim-osc52")'
+        } -- A Vim plugin to copy text through SSH with OSC52
 
 
         -- *****************************************
