@@ -18,7 +18,6 @@ vim.diagnostic.config({
 require("neotest").setup({
     adapters = {
         require('neotest-go'),
-        require("neotest-vim-test")({ allow_file_types = { "php" } }),
     },
     icons = {
         child_indent = "│",
@@ -40,7 +39,8 @@ require("neotest").setup({
 vim.keymap.set('n', '<Leader>tt', function() return require("neotest").run.run() end, { silent = true })
 vim.keymap.set('n', '<Leader>tf', function() return require("neotest").run.run(vim.fn.expand("%")) end, { silent = true })
 vim.keymap.set('n', '<Leader>ta', function() return require("neotest").run.attach() end, { silent = true })
-vim.keymap.set('n', '<Leader>td', function() return require("neotest").run.run({ strategy = "dap" }) end, { silent = true })
+vim.keymap.set('n', '<Leader>td', function() return require("neotest").run.run({ strategy = "dap" }) end,
+    { silent = true })
 vim.keymap.set('n', '<Leader>ts', function() return require("neotest").summary.toggle() end, { silent = true })
 
 if utils.isModuleAvailable("which-key") then
@@ -55,6 +55,3 @@ if utils.isModuleAvailable("which-key") then
         },
     }, { prefix = "<leader>" })
 end
-
--- make test commands execute using dispatch.vim
-vim.api.nvim_set_var('test#strategy', 'dispatch_background')
