@@ -4,6 +4,7 @@ local is_work = require("utils").is_work
 local sources = {
     -- null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
     -- null_ls.builtins.formatting.gofumpt, -- Enforce a stricter format than gofmt, while being backwards compatible.
+    null_ls.builtins.formatting.xmlformat, -- xmlformatter is an Open Source Python package, which provides formatting of XML documents.
     null_ls.builtins.diagnostics.eslint, -- Fixes problems in your JavaScript code.
 
     null_ls.builtins.completion.spell.with({
