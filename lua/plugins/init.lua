@@ -112,6 +112,10 @@ return require('packer').startup {
             'https://github.com/ojroques/nvim-osc52',
             config = 'require("plugins.nvim-osc52")'
         } -- A Vim plugin to copy text through SSH with OSC52
+        use {
+            'https://github.com/gbprod/substitute.nvim',
+            config = 'require("plugins.substitute-nvim")'
+        } -- Neovim plugin introducing a new operators motions to quickly replace and exchange text.
 
 
         -- *****************************************
