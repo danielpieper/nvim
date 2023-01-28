@@ -28,6 +28,7 @@ local highlights = {
     Conceal = { fg = c.base02 },
     Whitespace = { fg = c.base02 },
     NvimTreeIndentMarker = { fg = c.base02 },
+    IndentBlanklineContextChar = { fg = c.base03 },
 
     Search = { fg = c.base00, bg = c.base09 },
     IncSearch = { fg = c.base00, bg = c.base08 },

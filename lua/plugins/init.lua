@@ -29,9 +29,9 @@ return require('packer').startup {
             config = 'require("colorizer").setup()'
         } -- A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.
         use {
-            'https://github.com/Yggdroot/indentLine',
-            config = 'require("plugins.indentline")',
-        }
+            'https://github.com/lukas-reineke/indent-blankline.nvim',
+            config = 'require("plugins.indent-blankline-nvim")',
+        } -- Indent guides for Neovim
         use {
             'https://github.com/beauwilliams/focus.nvim',
             config = 'require("plugins.focus-nvim")',
