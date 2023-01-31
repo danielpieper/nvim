@@ -80,6 +80,14 @@ return require('packer').startup {
                 'https://github.com/nvim-lua/plenary.nvim', -- All the lua functions I don't want to write twice.
             },
         } -- Git signs written in pure lua.
+        use {
+            'sindrets/diffview.nvim',
+            config = 'require("plugins.diffview-nvim")',
+            requires = {
+                'https://github.com/nvim-lua/plenary.nvim', -- All the lua functions I don't want to write twice.
+                'https://github.com/kyazdani42/nvim-web-devicons', -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+            },
+        } -- Single tabpage interface for easily cycling through diffs for all modified files for any git rev.
 
 
         -- *****************************************
