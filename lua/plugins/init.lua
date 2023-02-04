@@ -82,7 +82,7 @@ return require('packer').startup {
             },
         } -- Git signs written in pure lua.
         use {
-            'sindrets/diffview.nvim',
+            'https://github.com/sindrets/diffview.nvim',
             config = 'require("plugins.diffview-nvim")',
             requires = {
                 'https://github.com/nvim-lua/plenary.nvim', -- All the lua functions I don't want to write twice.

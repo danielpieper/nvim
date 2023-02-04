@@ -129,6 +129,10 @@ local servers = {
     jsonls = {},
     tsserver = {},
     yamlls = {},
+    tailwindcss = {
+        filetypes = { "go", "gohtml", "html", "markdown", "php", "css", "less", "sass", "scss", "javascript",
+            "javascriptreact", "typescript", "typescriptreact", "vue" },
+    },
     terraformls = {
         filetypes = { "hcl", "tf", "terraform", "tfvars" },
     },
