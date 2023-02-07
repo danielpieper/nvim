@@ -137,7 +137,7 @@ function M.other_settings()
 
     vim.opt.incsearch = true
 
-    vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+    vim.o.sessionoptions = "blank,buffers,curdir,help,tabpages,terminal"
 end
 
 function M.load_settings()

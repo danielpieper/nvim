@@ -235,7 +235,7 @@ for server, config in pairs(servers) do
         end
     end
 
-    -- config.log_level = vim.lsp.protocol.MessageType.Log;
+    config.log_level = vim.lsp.protocol.MessageType.Error
     config.message_level = vim.lsp.protocol.MessageType.Log;
     config.capabilities = capabilities
 

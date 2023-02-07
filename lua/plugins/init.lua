@@ -35,7 +35,6 @@ return require('packer').startup {
         use {
             'https://github.com/beauwilliams/focus.nvim',
             config = 'require("plugins.focus-nvim")',
-            disable = true, -- this plugin creates an error when restoring sessions: 'winheight' cannot be smaller than 'winminheight': winheight=1
         } -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua! Vim splits on steroids.
 
 
@@ -151,7 +150,9 @@ return require('packer').startup {
         -- *****************************************
         -- Session
         -- *****************************************
-        use 'https://github.com/rmagatti/auto-session' -- A small automated session manager for Neovim
+        use { 'https://github.com/rmagatti/auto-session',
+            config = 'require("plugins.auto-session")',
+        } -- A small automated session manager for Neovim
 
 
         -- *****************************************
