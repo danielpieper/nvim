@@ -165,7 +165,7 @@ local servers = {
         cmd = lspcontainers.command('vuels'),
         root_dir = lspconfig.util.root_pattern(".git", vim.fn.getcwd()),
     },
-    sumneko_lua = {
+    lua_ls = {
         -- cmd = lspcontainers.command('sumneko_lua'),
         settings = {
             Lua = {
