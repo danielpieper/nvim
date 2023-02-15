@@ -1,4 +1,22 @@
 require "settings"
 require "mapping"
-require "plugins"
 require "autocmd"
+
+-- make sure lazy is installed
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+
+-- see https://github.com/rhysd/vim-startuptime
+-- see https://github.com/folke/lazy.nvim#-structuring-your-plugins
+return require('lazy').setup("plugins")

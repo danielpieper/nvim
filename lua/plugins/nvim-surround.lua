@@ -1,3 +1,11 @@
-require('nvim-surround').setup({
-    -- Configuration here, or leave empty to use defaults
-})
+-- *****************************************
+-- General
+-- *****************************************
+return {
+    {
+        -- Add/change/delete surrounding delimiter pairs with ease. Written with heart in Lua.
+        'https://github.com/kylechui/nvim-surround',
+        name = "nvim-surround",
+        config = true,
+    },
+}
