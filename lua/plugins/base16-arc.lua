@@ -5,6 +5,7 @@ return {
     {
         -- A base16 colorscheme.
         'https://github.com/danielpieper/base16-arc-vim',
+        priority = 1000,
         config = function()
             local c = require("colors")
 
