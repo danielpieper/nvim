@@ -139,10 +139,8 @@ tilt.dev Starlark LSP server.
             end
 
             local servers = {
+                nil_ls = {},
                 vimls = {},
-                kotlin_language_server = {
-                    root_dir = lspconfig.util.root_pattern("settings.gradle", "settings.gradle.kts", ".git"),
-                },
                 bashls = {},
                 dockerls = {},
                 html = {},
