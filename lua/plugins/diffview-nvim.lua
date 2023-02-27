@@ -7,7 +7,7 @@ return {
         'https://github.com/sindrets/diffview.nvim',
         dependencies = {
             'https://github.com/nvim-lua/plenary.nvim', -- All the lua functions I don't want to write twice.
-            'https://github.com/kyazdani42/nvim-web-devicons', -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+            'https://github.com/nvim-tree/nvim-web-devicons', -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
         },
         config = function()
             local actions = require("diffview.actions")

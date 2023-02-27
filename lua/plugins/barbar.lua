@@ -8,7 +8,7 @@ return {
         name = "bufferline",
         lazy = false,
         dependencies = {
-            'https://github.com/kyazdani42/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+            'https://github.com/nvim-tree/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
         },
         opts = {
             -- Enable/disable animations

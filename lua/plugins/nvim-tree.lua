@@ -6,7 +6,7 @@ return {
         -- A File Explorer For Neovim Written In Lua
         'https://github.com/kyazdani42/nvim-tree.lua',
         dependencies = {
-            'https://github.com/kyazdani42/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+            'https://github.com/nvim-tree/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
         },
         config = function()
             require('nvim-tree').setup {
