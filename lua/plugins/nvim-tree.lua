@@ -9,8 +9,6 @@ return {
             'https://github.com/kyazdani42/nvim-web-devicons' -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
         },
         config = function()
-            local tree_cb = require('nvim-tree.config').nvim_tree_callback
-
             require('nvim-tree').setup {
                 -- disables netrw completely
                 disable_netrw       = false,
@@ -59,15 +57,6 @@ return {
                     width = 60,
                     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
                     side = 'right',
-                    mappings = {
-                        -- custom only false will merge the list with the default mappings
-                        -- if true, it will only use your list to set the mappings
-                        custom_only = false,
-                        -- list of mappings to set on the tree manually
-                        list = {
-                            { key = "l", cb = tree_cb("edit") },
-                        }
-                    }
                 },
                 actions = {
                     open_file = {
