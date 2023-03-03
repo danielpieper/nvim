@@ -173,6 +173,7 @@ tilt.dev Starlark LSP server.
                 pylsp = {
                     -- cmd = lspcontainers.command('pylsp'),
                 },
+                rnix = {},
                 rust_analyzer = {
                     -- cmd = lspcontainers.command('rust_analyzer'),
                 },
