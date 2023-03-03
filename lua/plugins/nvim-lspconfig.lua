@@ -85,7 +85,7 @@ return {
 
                 -- Set some keybinds conditional on server capabilities
                 if client.server_capabilities.document_formatting then
-                    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gf", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>",
+                    vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gf", "<cmd>lua vim.lsp.buf.format()<CR>",
                         opts)
                 elseif client.server_capabilities.document_range_formatting then
                     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gf", "<cmd>lua vim.lsp.buf.range_formatting()<CR>",
@@ -99,7 +99,7 @@ return {
                         buffer = bufnr,
                         callback = function()
                             -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                            vim.lsp.buf.formatting_sync()
+                            vim.lsp.buf.format()
                         end,
                     })
                 end
@@ -139,7 +139,8 @@ tilt.dev Starlark LSP server.
             end
 
             local servers = {
-                nil_ls = {},
+                -- nil_ls = {},
+                rnix = {},
                 vimls = {},
                 bashls = {},
                 dockerls = {},
@@ -173,7 +174,6 @@ tilt.dev Starlark LSP server.
                 pylsp = {
                     -- cmd = lspcontainers.command('pylsp'),
                 },
-                rnix = {},
                 rust_analyzer = {
                     -- cmd = lspcontainers.command('rust_analyzer'),
                 },
