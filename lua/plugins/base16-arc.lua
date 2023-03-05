@@ -10,6 +10,9 @@ return {
             local c = require("colors")
 
             local highlights = {
+                Normal = { bg = "none" },
+                NonText = { bg = "none" },
+
                 LineNr = { bg = "none", fg = c.base03 },
                 CursorLineNr = { bg = "none" },
                 Error = { bg = "none", fg = c.base0E },
