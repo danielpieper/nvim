@@ -75,7 +75,7 @@ return {
         end,
         keys = {
             { '<F3>', ':NvimTreeToggle<CR>', desc = "Open Files Drawer", silent = true },
-            { '<Leader><F3>', ':NvimTreeFindFile<CR>', desc = "Open Files Drawer at current file", silent = true },
+            { '<Leader><F3>', ':NvimTreeFindFileToggle<CR>', desc = "Open Files Drawer at current file", silent = true },
         },
     },
 }
