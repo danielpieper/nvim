@@ -59,6 +59,12 @@ local aucmd_dict = {
                 vim.api.nvim_buf_set_option(0, "syntax", "config")
             end,
         },
+        {
+            pattern = "*.tf",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "filetype", "hcl")
+            end,
+        },
     },
 }
 

@@ -123,6 +123,7 @@ return {
                 "wgsl",
                 "yaml",
                 "json",
+                "hcl",
             }, -- put the language you want in this array
         },
         config = function(_, opts)
