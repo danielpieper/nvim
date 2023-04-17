@@ -5,6 +5,7 @@ return {
     {
         -- 🌈 Rainbow parentheses for neovim using tree-sitter 🌈
         'https://github.com/lincheney/nvim-ts-rainbow',
+        enabled = false,
         dependencies = {
             'https://github.com/nvim-treesitter/nvim-treesitter', -- Nvim Treesitter configurations and abstraction layer
         },
