@@ -7,7 +7,6 @@ return {
         'https://github.com/jose-elias-alvarez/null-ls.nvim',
         config = function()
             local null_ls = require("null-ls")
-            local is_work = require("utils").is_work
 
             local sources = {
                 -- null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
@@ -32,40 +31,17 @@ return {
                 null_ls.builtins.diagnostics.sqlfluff.with({
                     extra_args = { "--dialect", "postgres" }, -- change to your dialect
                 }),
+                null_ls.builtins.diagnostics.golangci_lint.with({
+                    args = {
+                        "run",
+                        "--fix=false",
+                        "--fast",
+                        "--out-format=json",
+                        "--path-prefix",
+                        "$ROOT",
+                    },
+                }), -- A Go linter aggregator.
             }
-
-            if is_work then
-                table.insert(
-                    sources,
-                    null_ls.builtins.diagnostics.golangci_lint.with({
-                        args = {
-                            "run",
-                            "--disable-all",
-                            "--enable govet,unused,gofmt,goimports,ineffassign,misspell,unconvert,revive,rowserrcheck,sqlclosecheck,bodyclose,staticcheck,exhaustive,gomodguard,depguard,exportloopref,errname,lll",
-                            "--deadline 5m",
-                            "--out-format json",
-                            "$DIRNAME",
-                            "--path-prefix",
-                            "$ROOT",
-                        },
-                    })
-                ) -- A Go linter aggregator.
-            else
-                table.insert(
-                    sources,
-                    null_ls.builtins.diagnostics.golangci_lint.with({
-                        args = {
-                            "run",
-                            "--enable-all",
-                            "--disable exhaustivestruct",
-                            "--out-format json",
-                            "$DIRNAME",
-                            "--path-prefix",
-                            "$ROOT",
-                        },
-                    })
-                ) -- A Go linter aggregator.
-            end
 
             null_ls.setup({
                 -- debug = true,

@@ -22,7 +22,7 @@ return {
                 update_cwd          = false,
                 -- show lsp diagnostics in the signcolumn
                 diagnostics         = {
-                    enable = false,
+                    enable = true,
                 },
                 -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
                 update_focused_file = {
