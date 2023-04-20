@@ -29,6 +29,9 @@ return {
                     timeout = 60000,
                     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
                 }), -- PHP static analysis tool.
+                null_ls.builtins.diagnostics.sqlfluff.with({
+                    extra_args = { "--dialect", "postgres" }, -- change to your dialect
+                }),
             }
 
             if is_work then
