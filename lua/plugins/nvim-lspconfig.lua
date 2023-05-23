@@ -148,7 +148,15 @@ tilt.dev Starlark LSP server.
                 cssls = {},
                 jsonls = {},
                 tsserver = {},
-                yamlls = {},
+                yamlls = {
+                    settings = {
+                        yaml = {
+                            schemas = {
+                                ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json"] = "openapi-*.yaml",
+                            },
+                        },
+                    },
+                },
                 tailwindcss = {
                     filetypes = { "go", "gohtml", "html", "markdown", "php", "css", "less", "sass", "scss", "javascript",
                         "javascriptreact", "typescript", "typescriptreact", "vue" },
