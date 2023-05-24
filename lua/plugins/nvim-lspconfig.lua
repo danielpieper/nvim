@@ -6,10 +6,10 @@ return {
         -- This plugin handles automatically launching, initializing, and configuring language servers that are installed on your system.
         'https://github.com/neovim/nvim-lspconfig',
         dependencies = {
-            'https://github.com/ray-x/lsp_signature.nvim', -- lsp signature hint when you type
+            'https://github.com/ray-x/lsp_signature.nvim',         -- lsp signature hint when you type
             'https://github.com/lspcontainers/lspcontainers.nvim', -- Neovim plugin for lspcontainers.
-            'https://github.com/hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim builtin LSP client
-            'https://github.com/nvim-telescope/telescope.nvim', -- Find, Filter, Preview, Pick. All lua, all the time.
+            'https://github.com/hrsh7th/cmp-nvim-lsp',             -- nvim-cmp source for neovim builtin LSP client
+            'https://github.com/nvim-telescope/telescope.nvim',    -- Find, Filter, Preview, Pick. All lua, all the time.
         },
         config = function()
             local lspconfig = require('lspconfig')
@@ -112,7 +112,7 @@ return {
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
-    ]]               , false)
+    ]], false)
                 end
             end
 
@@ -130,7 +130,7 @@ return {
                         description = [[
 https://docs.tilt.dev/cli/tilt_lsp_start.html
 tilt.dev Starlark LSP server.
-]]                       ,
+]],
                         default_config = {
                             root_dir = [[root_pattern("Tiltfile")]],
                         },
@@ -151,9 +151,7 @@ tilt.dev Starlark LSP server.
                 yamlls = {
                     settings = {
                         yaml = {
-                            schemas = {
-                                ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json"] = "openapi-*.yaml",
-                            },
+                            keyOrdering = false,
                         },
                     },
                 },
