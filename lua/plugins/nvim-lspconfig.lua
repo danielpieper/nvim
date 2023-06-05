@@ -139,8 +139,15 @@ tilt.dev Starlark LSP server.
             end
 
             local servers = {
-                -- nil_ls = {},
-                rnix = {},
+                nil_ls = {
+                    settings = {
+                        ["nil"] = {
+                            formatting = {
+                                command = { "nixpkgs-fmt" },
+                            },
+                        },
+                    },
+                },
                 vimls = {},
                 bashls = {},
                 dockerls = {},
