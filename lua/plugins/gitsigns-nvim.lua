@@ -1,16 +1,3 @@
--- if utils.isModuleAvailable("which-key") then
---     require("which-key").register({
---         G = {
---             name = "Git",
---             b = "Toggle git blame",
---             s = "Stage hunk",
---             u = "Undo stage hunk",
---             r = "Reset hunk",
---             p = "Preview hunk",
---         },
---     }, { prefix = "<leader>" })
--- end
-
 -- *****************************************
 -- Git
 -- *****************************************
@@ -32,18 +19,11 @@ return {
             },
             numhl = false,
             current_line_blame = true,
-            keymaps = {
-                -- Default keymap options
-                noremap = true,
-                buffer = true,
-
-                ["n ]h"] = { expr = true, '&diff ? \']c\' : \'<cmd>lua require"gitsigns".next_hunk()<CR>\'' },
-                ["n [h"] = { expr = true, '&diff ? \'[c\' : \'<cmd>lua require"gitsigns".prev_hunk()<CR>\'' },
-                ["n <leader>Gs"] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-                ["n <leader>Gu"] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-                ["n <leader>Gr"] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-                ["n <leader>Gp"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-                ["n <leader>Gb"] = '<cmd>lua require"gitsigns".toggle_current_line_blame()<CR>'
+            current_line_blame_opts = {
+                virt_text = true,
+                virt_text_pos = 'right_align', -- 'eol' | 'overlay' | 'right_align'
+                delay = 3000,
+                ignore_whitespace = true,
             },
         },
     },
