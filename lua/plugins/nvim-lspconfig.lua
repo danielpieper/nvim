@@ -155,6 +155,7 @@ tilt.dev Starlark LSP server.
                 cssls = {},
                 jsonls = {},
                 tsserver = {},
+                r_language_server = {},
                 yamlls = {
                     settings = {
                         yaml = {
