@@ -6,16 +6,16 @@ return {
         -- A completion plugin for neovim coded in Lua.
         'https://github.com/hrsh7th/nvim-cmp',
         dependencies = {
-            'https://github.com/hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
-            'https://github.com/hrsh7th/cmp-emoji', -- nvim-cmp source for emoji
-            'https://github.com/hrsh7th/cmp-nvim-lua', -- nvim-cmp source for nvim lua
-            'https://github.com/hrsh7th/cmp-path', -- nvim-cmp source for path
-            'https://github.com/hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim builtin LSP client
-            'https://github.com/hrsh7th/cmp-calc', -- nvim-cmp source for math calculation
-            'https://github.com/onsails/lspkind-nvim', -- This tiny plugin adds vscode-like pictograms to neovim built-in lsp completion
+            'https://github.com/hrsh7th/cmp-buffer',                   -- nvim-cmp source for buffer words
+            'https://github.com/hrsh7th/cmp-emoji',                    -- nvim-cmp source for emoji
+            'https://github.com/hrsh7th/cmp-nvim-lua',                 -- nvim-cmp source for nvim lua
+            'https://github.com/hrsh7th/cmp-path',                     -- nvim-cmp source for path
+            'https://github.com/hrsh7th/cmp-nvim-lsp',                 -- nvim-cmp source for neovim builtin LSP client
+            'https://github.com/hrsh7th/cmp-calc',                     -- nvim-cmp source for math calculation
+            'https://github.com/onsails/lspkind-nvim',                 -- This tiny plugin adds vscode-like pictograms to neovim built-in lsp completion
             'https://github.com/L3MON4D3/LuaSnip',
-            'https://github.com/saadparwaiz1/cmp_luasnip', -- luasnip completion source for nvim-cmp
-            'https://github.com/hrsh7th/cmp-cmdline', -- nvim-cmp source for vim's cmdline.
+            'https://github.com/saadparwaiz1/cmp_luasnip',             -- luasnip completion source for nvim-cmp
+            'https://github.com/hrsh7th/cmp-cmdline',                  -- nvim-cmp source for vim's cmdline.
             'https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol', -- The purpose is the demonstration customize / search by nvim-cmp.
         },
         config = function()
@@ -52,7 +52,6 @@ return {
                             fallback()
                         end
                     end, { "i", "s" }),
-
                     ["<S-Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_prev_item()
@@ -110,7 +109,8 @@ return {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = {
                     { name = 'nvim_lsp_document_symbol' }
-                }, {
+                },
+                {
                     { name = 'buffer' }
                 }
             })

@@ -176,8 +176,10 @@ tilt.dev Starlark LSP server.
                     -- cmd = lspcontainers.command('gopls'),
                     settings = {
                         gopls = {
+                            experimentalPostfixCompletions = true,
                             analyses = {
                                 unusedparams = true,
+                                shadow = true,
                             },
                             staticcheck = true,
                             ["formatting.gofumpt"] = not is_work,
