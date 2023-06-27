@@ -11,7 +11,8 @@ return {
             local sources = {
                 -- null_ls.builtins.formatting.stylua, -- A fast and opinionated Lua formatter written in Rust.
                 -- null_ls.builtins.formatting.gofumpt, -- Enforce a stricter format than gofmt, while being backwards compatible.
-                null_ls.builtins.diagnostics.eslint, -- Fixes problems in your JavaScript code.
+                null_ls.builtins.formatting.pg_format, -- PostgreSQL SQL syntax beautifier
+                null_ls.builtins.diagnostics.eslint,   -- Fixes problems in your JavaScript code.
 
                 null_ls.builtins.completion.spell.with({
                     filetypes = { "gitcommit", "markdown" },
@@ -28,9 +29,6 @@ return {
                     timeout = 60000,
                     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
                 }), -- PHP static analysis tool.
-                null_ls.builtins.diagnostics.sqlfluff.with({
-                    extra_args = { "--dialect", "postgres" }, -- change to your dialect
-                }),
                 null_ls.builtins.diagnostics.golangci_lint.with({
                     args = {
                         "run",
