@@ -22,6 +22,8 @@ return {
                 GitSignsAdd = { fg = c.base0B, bg = "none" },
                 GitSignsChange = { fg = c.base09, bg = "none" },
                 GitSignsDelete = { fg = c.base0E, bg = "none" },
+                GitSignsCurrentLineBlame = { fg = c.base02, bg = "none" },
+
                 EndOfBuffer = { fg = c.base02 },
 
                 -- TODO:
@@ -66,6 +68,8 @@ return {
                 BufferVisibleIndex = { bg = c.base00 },
                 BufferVisibleSign = { bg = c.base00 },
                 BufferInactiveSign = { fg = "Black", bg = c.base01 },
+
+                NotifyBackground = { bg = c.base00 },
 
                 rainbowcol1 = { fg = c.base08 },
                 rainbowcol2 = { fg = c.base09 },
