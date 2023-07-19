@@ -5,6 +5,10 @@ return {
     {
         -- A blazing fast and easy to configure neovim statusline plugin written in pure lua.
         'https://github.com/nvim-lualine/lualine.nvim',
+        dependencies = {
+            'https://github.com/nvim-tree/nvim-web-devicons',    -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+            'https://github.com/linrongbin16/lsp-progress.nvim', -- A performant lsp progress status for Neovim.
+        },
         config = function()
             local custom_base16 = require('lualine.themes.base16')
 
@@ -43,7 +47,8 @@ return {
                         {
                             'filename',
                             path = 1,
-                        }
+                        },
+                        "require('lsp-progress').progress()",
                     },
                     lualine_x = { 'encoding', 'fileformat', 'filetype' },
                     lualine_y = { 'progress' },
@@ -61,5 +66,15 @@ return {
                 extensions = { 'nvim-tree', 'quickfix' },
             }
         end,
+    },
+    {
+        -- A performant lsp progress status for Neovim.
+        'https://github.com/linrongbin16/lsp-progress.nvim',
+        dependencies = {
+            'https://github.com/nvim-tree/nvim-web-devicons', -- A lua fork of vim-devicons. This plugin provides the same icons as well as colors for each icon.
+        },
+        config = function()
+            require('lsp-progress').setup()
+        end
     },
 }
