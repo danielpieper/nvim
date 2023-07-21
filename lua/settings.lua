@@ -73,6 +73,7 @@ function M.filetype()
 end
 
 function M.other_settings()
+    vim.opt.cmdheight = 0
     -- vim.opt.colorcolumn = "80"
     vim.opt.termguicolors = true
     vim.opt.guifont = 'JetBrainsMono Nerd Font Mono:h20'
