@@ -21,6 +21,7 @@ return {
         config = function()
             local c = require("colors")
             local cmp = require('cmp')
+            local compare = require("cmp.config.compare")
             local luasnip = require("luasnip")
 
             local has_words_before = function()
@@ -102,6 +103,15 @@ return {
                     { name = 'nvim_lua' },
                     { name = 'emoji' },
                 }),
+                sorting = {
+                    comparators = {
+                        compare.score,
+                        compare.offset,
+                        compare.recently_used,
+                        compare.locality,
+                        compare.exact,
+                    },
+                },
             })
 
             -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
