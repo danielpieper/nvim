@@ -13,19 +13,18 @@ return {
             local custom_base16 = require('lualine.themes.base16')
 
             local colors = {
-                bg     = '#151718',
-                alt_bg = '#1D1F21',
+                bg = '#1D1F21',
             }
 
             custom_base16.normal.a.fg = colors.bg
-            custom_base16.normal.b.bg = colors.alt_bg
+            custom_base16.normal.b.bg = colors.bg
             custom_base16.normal.c.bg = colors.bg
             custom_base16.replace.a.fg = colors.bg
-            custom_base16.replace.b.bg = colors.alt_bg
+            custom_base16.replace.b.bg = colors.bg
             custom_base16.insert.a.fg = colors.bg
-            custom_base16.insert.b.bg = colors.alt_bg
+            custom_base16.insert.b.bg = colors.bg
             custom_base16.visual.a.fg = colors.bg
-            custom_base16.visual.b.bg = colors.alt_bg
+            custom_base16.visual.b.bg = colors.bg
             custom_base16.inactive.a.bg = colors.bg
             custom_base16.inactive.b.bg = colors.bg
             custom_base16.inactive.c.bg = colors.bg
