@@ -105,11 +105,12 @@ return {
                 }),
                 sorting = {
                     comparators = {
-                        compare.score,
                         compare.offset,
+                        compare.exact,
+                        compare.score,
                         compare.recently_used,
                         compare.locality,
-                        compare.exact,
+                        compare.kind,
                     },
                 },
             })
