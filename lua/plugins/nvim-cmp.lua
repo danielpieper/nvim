@@ -104,9 +104,11 @@ return {
                     { name = 'emoji' },
                 }),
                 sorting = {
+                    -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/compare.lua
                     comparators = {
                         compare.offset,
                         compare.exact,
+                        compare.length,
                         compare.score,
                         compare.recently_used,
                         compare.locality,
