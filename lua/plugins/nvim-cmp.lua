@@ -23,6 +23,18 @@ return {
             local cmp = require('cmp')
             local compare = require("cmp.config.compare")
             local luasnip = require("luasnip")
+            local types = require("cmp.types")
+
+            local deprio = function(kind)
+                return function(e1, e2)
+                    if e1:get_kind() == kind then
+                        return false
+                    end
+                    if e2:get_kind() == kind then
+                        return true
+                    end
+                end
+            end
 
             local has_words_before = function()
                 local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -106,13 +118,17 @@ return {
                 sorting = {
                     -- https://github.com/hrsh7th/nvim-cmp/blob/main/lua/cmp/config/compare.lua
                     comparators = {
+                        deprio(types.lsp.CompletionItemKind.Snippet),
+                        deprio(types.lsp.CompletionItemKind.Text),
+                        deprio(types.lsp.CompletionItemKind.Keyword),
                         compare.offset,
                         compare.exact,
-                        compare.length,
                         compare.score,
                         compare.recently_used,
-                        compare.locality,
                         compare.kind,
+                        -- compare.sort_text,
+                        -- compare.length,
+                        -- compare.locality,
                     },
                 },
             })
