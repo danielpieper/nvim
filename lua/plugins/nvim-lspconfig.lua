@@ -184,7 +184,7 @@ tilt.dev Starlark LSP server.
                             },
                             staticcheck = true,
                             ["formatting.gofumpt"] = not is_work,
-                            env = { GOFLAGS = "-tags=component" },
+                            ["build.buildFlags"] = { "-tags=component,tools" },
                         },
                     },
                 },
