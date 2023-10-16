@@ -34,7 +34,39 @@ local aucmd_dict = {
             command = "if &buftype == 'help' | wincmd L | setlocal relativenumber | endif",
         },
     },
-    ["BufNewFile,BufRead"] = {
+    BufNewFile = {
+        {
+            pattern = "*stylelintrc,*eslintrc,*babelrc,*jshintrc",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "syntax", "json")
+            end,
+        },
+        {
+            pattern = "*.vue",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "filetype", "vue.html.javascript.css")
+            end,
+        },
+        {
+            pattern = "*.neon",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "filetype", "yaml")
+            end,
+        },
+        {
+            pattern = "Tiltfile",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "syntax", "config")
+            end,
+        },
+        {
+            pattern = "*.tf",
+            callback = function()
+                vim.api.nvim_buf_set_option(0, "filetype", "hcl")
+            end,
+        },
+    },
+    BufRead = {
         {
             pattern = "*stylelintrc,*eslintrc,*babelrc,*jshintrc",
             callback = function()
