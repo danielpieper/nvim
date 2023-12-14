@@ -72,4 +72,65 @@ return {
       },
     },
   },
+  {
+    -- A lua neovim plugin to generate shareable file permalinks
+    "linrongbin16/gitlinker.nvim", -- https://github.com/linrongbin16/gitlinker.nvim
+    name = "gitlinker",
+    config = true,
+    keys = {
+      {
+        "<leader>glo",
+        "<cmd>GitLink!<cr>",
+        desc = "open git repo url in browser",
+        silent = true,
+        noremap = true,
+      },
+      {
+        "<leader>glo",
+        "<cmd>GitLink!<cr>",
+        desc = "open git repo url",
+        mode = "v",
+        silent = true,
+        noremap = true,
+      },
+      {
+        "<leader>gly",
+        "<cmd>GitLink<cr>",
+        desc = "copy git repo url to clipboard",
+        silent = true,
+        noremap = true,
+      },
+      {
+        "<leader>gly",
+        "<cmd>GitLink<cr>",
+        desc = "copy git repo url to clipboard",
+        mode = "v",
+        silent = true,
+        noremap = true,
+      },
+      {
+        "<leader>glb",
+        "<cmd>GitLink blame<cr>",
+        desc = "copy git blame repo url to clipboard",
+        silent = true,
+        noremap = true,
+      },
+      {
+        "<leader>glb",
+        "<cmd>GitLink blame<cr>",
+        desc = "copy git blame repo url to clipboard",
+        mode = "v",
+        silent = true,
+        noremap = true,
+      },
+    },
+  },
+  {
+    "folke/which-key.nvim",
+    opts = {
+      defaults = {
+        ["<leader>gl"] = { name = "+repo link" },
+      },
+    },
+  },
 }
