@@ -17,6 +17,18 @@ return {
     },
   },
   {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+        delay = 2000,
+        ignore_whitespace = true,
+      },
+    },
+  },
+  {
     -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua! Vim splits on steroids.
     "nvim-focus/focus.nvim", -- https://github.com/nvim-focus/focus.nvim
     main = "focus",
