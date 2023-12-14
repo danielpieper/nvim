@@ -29,6 +29,17 @@ return {
     },
   },
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        layout_config = {
+          height = 0.95,
+          width = 0.95,
+        },
+      },
+    },
+  },
+  {
     -- Auto-Focusing and Auto-Resizing Splits/Windows for Neovim written in Lua! Vim splits on steroids.
     "nvim-focus/focus.nvim", -- https://github.com/nvim-focus/focus.nvim
     main = "focus",
