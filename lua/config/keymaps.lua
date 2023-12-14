@@ -23,5 +23,5 @@ local function paste_blank_line_below()
   paste_blank_line(vim.fn.line("."))
 end
 
-vim.keymap.set("n", "]<Space>", paste_blank_line_above)
-vim.keymap.set("n", "[<Space>", paste_blank_line_below)
+vim.keymap.set("n", "[<Space>", paste_blank_line_above)
+vim.keymap.set("n", "]<Space>", paste_blank_line_below)
