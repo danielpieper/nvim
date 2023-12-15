@@ -2,7 +2,7 @@ return {
   {
     -- Smooth scrolling for Vim done right🥤
     "psliwka/vim-smoothie", -- https://github.com/psliwka/vim-smoothie
-    enabled = false,
+    enabled = true,
   },
   {
     -- A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Luajit.

@@ -79,7 +79,7 @@ return {
       enable = true,
       commands = false,
       ui = {
-        hybridnumber = true,
+        signcolumn = false,
       },
     },
   },
