@@ -27,4 +27,11 @@ return {
       { "s", "<cmd>lua require('substitute').visual()<cr>", mode = "x", noremap = true },
     },
   },
+  {
+    "folke/flash.nvim",
+    keys = { -- unset keys conflicting with substitute.nvim
+      { "s", mode = { "n", "x", "o" }, false },
+      { "S", mode = { "n", "o", "x" }, false },
+    },
+  },
 }
