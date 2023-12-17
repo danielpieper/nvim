@@ -68,12 +68,9 @@ return {
         },
       },
     },
+    -- stylua: ignore
     keys = {
-      {
-        "<leader>fp",
-        ":lua require('telescope').extensions.tmuxinator.projects(require('telescope.themes').get_dropdown({}))<CR>",
-        desc = "Tmuxinator Projects",
-      },
+      { "<leader>fp", function() require("telescope").extensions.tmuxinator.projects(require("telescope.themes").get_dropdown({})) end, desc = "Tmuxinator Projects" },
     },
   },
   {
