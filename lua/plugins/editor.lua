@@ -1,3 +1,5 @@
+local Util = require("lazyvim.util")
+
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -30,6 +32,17 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = {
+      {
+        "danielpieper/telescope-tmuxinator.nvim", -- https://github.com/danielpieper/telescope-tmuxinator.nvim
+        enabled = vim.fn.executable("tmuxinator") == 1,
+        config = function()
+          Util.on_load("telescope.nvim", function()
+            require("telescope").load_extension("tmuxinator")
+          end)
+        end,
+      },
+    },
     opts = {
       defaults = {
         layout_config = {
@@ -46,6 +59,20 @@ return {
         lsp_implementations = { fname_width = 50 },
         lsp_document_symbols = { fname_width = 50 },
         lsp_workspace_symbols = { fname_width = 50 },
+      },
+      extensions = {
+        tmuxinator = {
+          select_action = "switch", -- | 'stop' | 'kill'
+          stop_action = "stop", -- | 'kill'
+          disable_icons = false,
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>fp",
+        ":lua require('telescope').extensions.tmuxinator.projects(require('telescope.themes').get_dropdown({}))<CR>",
+        desc = "Tmuxinator Projects",
       },
     },
   },
