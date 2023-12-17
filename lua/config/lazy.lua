@@ -33,6 +33,13 @@ require("lazy").setup({
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
+  dev = {
+    -- directory where you store your local plugin projects
+    path = "~/Projects",
+    ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
+    patterns = { "danielpieper/telescope-tmuxinator.nvim" }, -- For example {"folke"}
+    fallback = true, -- Fallback to git when local plugin doesn't exist
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
