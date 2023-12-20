@@ -14,8 +14,7 @@ return {
       vim.g.db_ui_execute_on_save = 0
     end,
     keys = {
-      { "<Leader>dd", ":DBUIToggle<CR>", desc = "Open database drawer", silent = true },
-      { "<Leader>di", ":DBUILastQueryInfo<CR>", desc = "Last database query results", silent = true },
+      { "<Leader>D", ":DBUIToggle<CR>", desc = "Open database drawer", silent = true },
     },
   },
   {
@@ -43,13 +42,5 @@ return {
         end,
       })
     end,
-  },
-  {
-    "folke/which-key.nvim",
-    opts = {
-      defaults = {
-        ["<leader>d"] = { name = "+database" },
-      },
-    },
   },
 }
