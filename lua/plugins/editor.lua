@@ -121,7 +121,18 @@ return {
     -- A lua neovim plugin to generate shareable file permalinks
     "linrongbin16/gitlinker.nvim", -- https://github.com/linrongbin16/gitlinker.nvim
     name = "gitlinker",
-    config = true,
+    config = function()
+      require("gitlinker").setup({
+        router = {
+          browse = {
+            ["^gitlab%.personio-internal%.de"] = require("gitlinker.routers").gitlab_browse,
+          },
+          blame = {
+            ["^gitlab%.personio-internal%.de"] = require("gitlinker.routers").gitlab_blame,
+          },
+        },
+      })
+    end,
     keys = {
       {
         "<leader>glo",
