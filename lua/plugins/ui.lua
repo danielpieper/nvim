@@ -10,4 +10,12 @@ return {
     name = "colorizer",
     config = true,
   },
+  {
+    "akinsho/bufferline.nvim",
+    keys = {
+      -- keys collide with move cursor high/low
+      { "<S-h>", false },
+      { "<S-l>", false },
+    },
+  },
 }

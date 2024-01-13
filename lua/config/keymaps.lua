@@ -40,3 +40,7 @@ end
 
 vim.keymap.set("n", "<Leader>by", copy_rel_path, { desc = "Copy relative path" })
 vim.keymap.set("n", "<Leader>bY", copy_rel_file, { desc = "Copy relative file" })
+
+-- keys collide with move cursor high/low
+vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<S-l>")
