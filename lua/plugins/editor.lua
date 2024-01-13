@@ -125,10 +125,10 @@ return {
       require("gitlinker").setup({
         router = {
           browse = {
-            ["^gitlab%.personio-internal%.de"] = require("gitlinker.routers").gitlab_browse,
+            ["^gitlab%.personio%-internal%.de"] = require("gitlinker.routers").gitlab_browse,
           },
           blame = {
-            ["^gitlab%.personio-internal%.de"] = require("gitlinker.routers").gitlab_blame,
+            ["^gitlab%.personio%-internal%.de"] = require("gitlinker.routers").gitlab_blame,
           },
         },
       })
