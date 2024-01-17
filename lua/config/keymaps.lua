@@ -27,13 +27,13 @@ vim.keymap.set("n", "[<Space>", paste_blank_line_above, { desc = "Add blank line
 vim.keymap.set("n", "]<Space>", paste_blank_line_below, { desc = "Add blank line below" })
 
 local function copy_rel_path()
-  local path = string.sub(vim.fn.expand("%:h"), string.len(vim.fn.getcwd()) + 2)
+  local path = string.sub(vim.fn.expand("%:p:h"), string.len(vim.fn.getcwd()) + 2)
   vim.fn.setreg("+", path)
   vim.notify('Copied "' .. path .. '" to the clipboard!')
 end
 
 local function copy_rel_file()
-  local path = string.sub(vim.fn.expand("%"), string.len(vim.fn.getcwd()) + 2)
+  local path = string.sub(vim.fn.expand("%:p"), string.len(vim.fn.getcwd()) + 2)
   vim.fn.setreg("+", path)
   vim.notify('Copied "' .. path .. '" to the clipboard!')
 end
