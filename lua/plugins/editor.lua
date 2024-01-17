@@ -2,6 +2,10 @@ local Util = require("lazyvim.util")
 
 return {
   {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
@@ -79,7 +83,7 @@ return {
     main = "focus",
     config = function(_, opts)
       local ignore_filetypes = { "neo-tree" }
-      local ignore_buftypes = { "nofile", "prompt", "popup" }
+      local ignore_buftypes = { "nofile", "prompt", "popup", "quickfix" }
 
       local augroup = vim.api.nvim_create_augroup("FocusDisable", { clear = true })
 

@@ -11,7 +11,7 @@ return {
         intelephense = {
           filetypes = { "php", "blade" },
           init_options = {
-            licenceKey = "${config.xdg.configHome}/intelephense/license.txt",
+            licenceKey = vim.fn.expand("$HOME/.config/intelephense/license.txt"),
             -- clearCache = true
           },
           settings = {

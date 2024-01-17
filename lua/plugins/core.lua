@@ -1,6 +1,8 @@
 return {
   {
     "williamboman/mason.nvim",
-    enabled = false, -- won't work on nixos
+    enabled = function()
+      return (vim.loop.os_uname().sysname ~= "Linux") -- won't work on nixos
+    end,
   },
 }
