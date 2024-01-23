@@ -8,6 +8,13 @@ return {
             ["nil"] = { formatting = { command = { "nixpkgs-fmt" } } },
           },
         },
+        gopls = {
+          settings = {
+            gopls = {
+              ["build.buildFlags"] = { "-tags=component,tools" },
+            },
+          },
+        },
         intelephense = {
           filetypes = { "php", "blade" },
           init_options = {
