@@ -83,7 +83,7 @@ return {
     main = "focus",
     config = function(_, opts)
       local ignore_filetypes = { "neo-tree" }
-      local ignore_buftypes = { "nofile", "prompt", "popup", "quickfix" }
+      local ignore_buftypes = { "nofile", "prompt", "popup", "quickfix", "dbui" }
 
       local augroup = vim.api.nvim_create_augroup("FocusDisable", { clear = true })
 
@@ -192,5 +192,9 @@ return {
         ["<leader>gl"] = { name = "+repo link" },
       },
     },
+  },
+  {
+    "NoahTheDuke/vim-just",
+    ft = { "just" },
   },
 }
