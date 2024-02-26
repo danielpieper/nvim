@@ -5,6 +5,7 @@ return {
       linters_by_ft = {
         go = { "golangcilint" },
         php = { "phpcs", "phpstan" },
+        kotlin = { "ktlint" },
       },
     },
   },

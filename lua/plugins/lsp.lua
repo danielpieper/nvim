@@ -15,6 +15,7 @@ return {
             },
           },
         },
+        kotlin_language_server = {},
         intelephense = {
           filetypes = { "php", "blade" },
           init_options = {
