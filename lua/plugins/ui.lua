@@ -12,10 +12,21 @@ return {
   },
   {
     "akinsho/bufferline.nvim",
+    opts = {
+      options = {
+        hover = {
+          enabled = true,
+          delay = 200,
+          reveal = { "close" },
+        },
+      },
+    },
     keys = {
       -- keys collide with move cursor high/low
       { "<S-h>", false },
       { "<S-l>", false },
+      -- Switch from Other buffer is changed to <leader>bn
+      { "<leader>bb", "<Cmd>BufferLinePick<CR>", desc = "Pick Buffer" },
     },
   },
 }
